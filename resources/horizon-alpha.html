@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Horizon Alpha</title>
+        <link rel="stylesheet/less" type="text/css" href="css/style.less">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    </head>
+    <body>
+        <!-- application !-->
+        <div id="root"></div>
+
+        <!-- svg styles : gradients !-->
+        <svg height="0" width="0">
+          <defs>
+            <radialGradient id="grad_grass" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" style="stop-color:#01A611;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#005C09;stop-opacity:1" />
+            </radialGradient>
+            <radialGradient id="grad_rock" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" style="stop-color: #B3A580;stop-opacity:1"></stop>
+              <stop offset="60%" style="stop-color: grey;stop-opacity:1"></stop>
+              <stop offset="65%" style="stop-color: #01A611;stop-opacity:1"></stop>
+              <stop offset="90%" style="stop-color:#005C09;stop-opacity:1"></stop>
+            </radialGradient>
+            <radialGradient id="grad_lava" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+              <stop offset="0%" style="stop-color:orange;stop-opacity:1" />
+              <stop offset="25%" style="stop-color:red;stop-opacity:1" />
+              <stop offset="50%" style="stop-color:maroon;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#005C09;stop-opacity:1" />
+            </radialGradient>
+          </defs>
+        </svg>
+
+        <!-- load javascript at the end !-->
+        <script src="http://fb.me/react-0.11.1.js"></script>
+        <script src="../out/dev/goog/base.js" type="text/javascript"></script>
+        <script src="../out/dev/horizon_alpha.js" type="text/javascript"></script>
+        <script type="text/javascript">goog.require("horizon_alpha.core");</script>
+        <script type="text/javascript">
+            var is_not_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') < 0;
+            if (is_not_chrome) {
+                alert( "Le jeu a pour l'instant uniquement était testé avec Google Chrome. " +
+                       "En continuant, aucunes garanties ne peuvent être faites concernant " +
+                       "les performances ou même le fonctionnement correct du jeu.\n\n" +
+                       "Essayez Google Chrome : http://www.google.com/intl/fr_fr/chrome/browser/");
+            }
+    </script>
+    </body>
+</html>

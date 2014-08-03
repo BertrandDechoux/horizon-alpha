@@ -1,0 +1,5 @@
+out/
+.lein*
+target
+out
+.DS_Store

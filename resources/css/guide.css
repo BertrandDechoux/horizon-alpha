@@ -1,0 +1,39 @@
+body {
+  padding-top: 70px;
+}
+
+html, body {
+  background: #888888;
+}
+
+.content {
+  padding: 10px 40px;
+  background: #CCCCCC;
+  margin-top: 10px;
+  border-radius: 15px;
+  border: solid 2px #483d8b;
+}
+
+img.guild {
+  float: left;
+  width: 200px;
+  height: 300px;
+  border: solid 2px #483d8b;
+  padding: 10px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 40px;
+}
+
+img.noob {
+  float: left;
+  width: 100px;
+  height: 200px;
+  border: solid 2px #483d8b;
+  padding: 10px;
+  background: white;
+  border-radius: 15px;
+  margin-right: 40px;
+}
+
+a.anchor{display: block; position: relative; top: -70px; visibility: hidden;}

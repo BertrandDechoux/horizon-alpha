@@ -1,0 +1,251 @@
+@border-color: darkslateblue;
+@app-background: #CCCCCC;
+@player-background: burlywood;
+@pc-stroke: navy;
+@npc-stroke: darkred;
+@pc-background: lighten(@pc-stroke,55%);
+@npc-background: indianred;
+@active-background: lightyellow;
+@active-color: darkorange;
+
+html {
+  background: #888888;
+}
+
+#app {
+  margin: auto;
+  width: 1160px;
+
+  div.apptitle {
+    border: solid 2px @border-color;
+    width: 640px;
+    background: @app-background;
+    border-radius: 50px;
+    margin: 5px auto 5px auto;
+    text-align: center;
+
+    span {
+      font-size: 42px;
+      font-style: italic;
+      color: @border-color;
+    }
+
+    a {
+      margin-left: 10px;
+    }
+  }
+
+  div.pcs, div.npcs {
+    border: solid 2px @border-color;
+    width: 250px;
+    height: 540px;
+    background: @app-background;
+    float:left;
+    border-radius: 15px;
+  }
+
+  div.npcs div.title {
+    text-align: center;
+    color: darkred;
+    font-size:28px;
+    margin:8px;
+  }
+
+  div.pcs img.logo {
+    margin: 8px auto 8px auto;
+    width: 130px;
+    display: block;
+  }
+
+  svg.field {
+    border: solid 2px darkgreen;
+    width: 620px;
+    height : 520px;
+    background: #005C09;
+    float:left;
+    margin: 10px;
+
+    circle.loot {
+      fill: gold;
+      stroke: maroon;
+      stroke-width: 2px;
+    }
+
+    text.loot {
+      fill: darkgoldenrod;
+      stroke: maroon;
+      stroke-width: 2px;
+      font-size: 34;
+    }
+  }
+
+  circle.pc {
+    fill : @player-background;
+    stroke: @pc-stroke;
+    stroke-width: 2px;
+  }
+
+  circle.npc {
+    fill : @player-background;
+    stroke: @npc-stroke;
+    stroke-width: 2px;
+  }
+
+  circle.active {
+    fill : @active-background;
+  }
+
+  circle.pc.focus, circle.npc.focus {
+    stroke-dasharray: 4;
+  }
+
+  circle.pc.focus {
+    fill: @pc-background;
+  }
+
+  circle.npc.focus {
+    fill: @npc-background;
+  }
+
+  path.pc {
+    fill-opacity: 0.3;
+    fill : @pc-stroke;
+    stroke: @pc-stroke;
+    stroke-width: 2px;
+  }
+
+  path.npc {
+    fill-opacity: 0.3;
+    fill : darkred;
+    stroke: darkred;
+    stroke-width: 2px;
+  }
+
+  g.target path {
+    stroke: @pc-stroke;
+    stroke-width: 2px;
+  }
+
+  g.target.attack path, g.target.unleash path, g.target.heal path, g.target.beam path {
+    stroke: @active-background;
+    stroke-width: 2px;
+  }
+
+  g.target circle {
+    fill: transparent;
+  }
+
+  g.target.block circle, g.target.charge circle, g.target.boast circle {
+    fill: @pc-stroke;
+    fill-opacity: 0.5;
+  }
+
+  g.target.move:hover circle, g.target.loot:hover circle {
+    fill: @pc-background;
+  }
+
+  g.target.attack:hover circle, g.target.unleash:hover circle, g.target.heal:hover circle, g.target.beam:hover circle {
+    fill: @pc-background;
+  }
+
+  g.target.move circle, g.target.loot circle {
+    stroke: @pc-stroke;
+    stroke-width: 2px;
+    fill: @active-background;
+  }
+
+  g.target.attack circle, g.target.unleash circle, g.target.heal circle, g.target.beam circle {
+    stroke: @active-background;
+    stroke-width: 2px;
+    fill: @pc-stroke;
+  }
+
+  g.target {
+    cursor: pointer;
+  }
+
+  .player {
+    height: 75px;
+    width: 235px;
+    margin: 2px;
+    margin-right: 6px;
+    margin-left: 6px;
+    clear: both;
+    background: white;
+    border: solid 1px @border-color;
+
+    &.active {
+      background: @active-background;
+      border: solid 2px @active-color;
+    }
+
+    &.focus.pc {
+      background: @pc-background;
+    }
+
+    &.focus.npc {
+      background: @npc-background;
+    }
+
+    p {
+      margin: 5px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 45px;
+      height: 45px;
+      background: burlywood;
+      margin: 10px;
+      margin-top: 12px;
+      float:left;
+      border: solid 1px @border-color;
+    }
+
+    .stats {
+      float: right;
+      margin-right: 10px;
+
+      .stat {
+        width: 150px;
+        height: 8px;
+        margin: 2px;
+        border: solid 1px @border-color;
+        background: white;
+
+        div {
+          margin: 0px;
+          padding: 0px;
+          border: none;
+          height: 8px;
+          width: 100%;
+          border-right: solid 1px @border-color;
+        }
+
+        &.hp {
+          background: rgba(202, 230, 202, 1);
+          div {
+            background: seagreen;
+          }
+        }
+
+        &.sp {
+          background: #BABAFF;
+          div {
+            background: darkblue;
+          }
+        }
+
+        &.ap {
+          background: lighten(orange,40%);
+          div {
+            background: orange;
+          }
+        }
+
+      }
+    }
+
+  }
+
+}

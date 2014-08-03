@@ -1,0 +1,6 @@
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+See http://creativecommons.org/licenses/by-nc-nd/4.0/ for further information.
+
+The game mechanics and the actual implementation : Copyright 2014 Bertrand Dechoux.
+Name of the characters, the universe, the pictures : Copyright 2014 OLYDRI Studio.
