@@ -1,6 +1,6 @@
 (defproject horizon-alpha "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Poc game based on the Noob universe from studio OLYDRI"
+  :url "http://bertranddechoux.github.io/horizon-alpha/resources/horizon-alpha.html"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2277"]
