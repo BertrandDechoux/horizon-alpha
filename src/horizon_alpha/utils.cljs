@@ -1,6 +1,6 @@
 (ns horizon-alpha.utils
   "Various utilities for clojure, clojureScript or OM."
-  (:require [cljs.core.async :as async :refer [go <! timeout]])
+  (:require [cljs.core.async :as async :refer [<! timeout]])
   (:require-macros [cljs.core.async.macros :as m :refer [go]]))
 
 (defn app-element [id]
