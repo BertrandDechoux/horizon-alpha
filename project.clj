@@ -2,13 +2,14 @@
   :description "Poc game based on the Noob universe from studio OLYDRI"
   :url "http://bertranddechoux.github.io/horizon-alpha/resources/horizon-alpha.html"
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
+  :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "0.0-2277"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
-                 [om "0.7.0"]]
+                 [om "0.7.3"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
-            [com.cemerick/clojurescript.test "0.3.1"]]
+            [com.cemerick/clojurescript.test "0.3.1"]
+            [lein-ancient "0.6.7"]]
 
   :source-paths ["src"]
   :hooks [leiningen.cljsbuild]
