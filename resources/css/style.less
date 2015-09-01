@@ -177,6 +177,34 @@ html {
     &.active {
       background: @active-background;
       border: solid 2px @active-color;
+      animation: active_player 1s steps(2, start) infinite;
+      -webkit-animation: active_player 1s steps(2, start) infinite;
+      
+      @keyframes active_player {
+        to {
+            border: solid 2px darkred;
+        }
+      }
+      @-webkit-keyframes active_player {
+        to {
+            border: solid 2px darkred;
+        }
+      }
+       
+      .stats .stat.ap div {
+          animation: active_ap 1s steps(2, start) infinite;
+          -webkit-animation: active_ap 1s steps(2, start) infinite;
+          @keyframes active_ap {
+            to {
+                background: darkred;
+            }
+          }
+          @-webkit-keyframes active_ap {
+            to {
+                background: darkred;
+            }
+          }
+      }
     }
 
     &.focus.pc {
