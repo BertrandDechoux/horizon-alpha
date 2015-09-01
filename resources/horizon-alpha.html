@@ -44,6 +44,28 @@
                        "les performances ou même le fonctionnement correct du jeu.\n\n" +
                        "Essayez Google Chrome : http://www.google.com/intl/fr_fr/chrome/browser/");
             }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script>
+			$(document).ready(function() {
+				$( document ).on( "mouseenter", "div.player,circle.pc,circle.npc", function() {
+					$("body audio").remove();
+					$("<audio></audio>").attr({ 
+						'src':'audio/player.wav', 
+						'volume': 0.1,
+						'autoplay':'autoplay'
+					}).appendTo("body");
+				});
+				$( document ).on( "mouseenter", "g.target", function() {
+					$("body audio").remove();
+					$("<audio></audio>").attr({ 
+						'src':'audio/choice.wav', 
+						'volume': 0.1,
+						'autoplay':'autoplay'
+					}).appendTo("body");
+				});
+			});
     </script>
     </body>
 </html>
