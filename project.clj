@@ -5,6 +5,7 @@
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.122"]
                  [org.clojure/core.async "0.1.267.0-0d7780-alpha"]
+                 [com.taoensso/tower "3.1.0-beta3"]
                  [org.omcljs/om "0.9.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]

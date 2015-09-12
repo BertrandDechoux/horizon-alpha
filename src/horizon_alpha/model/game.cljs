@@ -6,7 +6,11 @@
             [horizon-alpha.model.action :as a]
             [horizon-alpha.model.target :as target]
             [horizon-alpha.model.ai :as ai]
-            [horizon-alpha.utils :refer [do-while-clock later and?]]))
+            [horizon-alpha.utils :refer [do-while-clock later and?]]
+            [horizon-alpha.i18n :refer [i18n]]))
+
+; bad package architecture...
+(def t (i18n))
 
 (declare start!)
 
@@ -45,8 +49,8 @@
   "When clock stops, check end of game or find out which side must play."
   (let [player (get (:players @state) (:active @state))
         type (:type player)]
-    (cond (= 0 (-> @state :players p/npcs count)) (js/alert "Vous avez gagné! :D")
-          (not= 4 (-> @state :players p/pcs count)) (js/alert "Vous avez perdu! :(")
+    (cond (= 0 (-> @state :players p/npcs count)) (js/alert (t :app/win))
+          (not= 4 (-> @state :players p/pcs count)) (js/alert (t :app/lose))
           (= :npc type) (npc-end! state)
           (= :pc type) (pc-end! state))))
 

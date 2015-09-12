@@ -7,6 +7,14 @@
   "Specify the dom anchor : https://github.com/swannodette/om/wiki/Documentation#root"
   {:target (. js/document (getElementById id))})
 
+(defn lang[]
+  "Language of the navigator eg en-US"
+  (aget js/window "navigator" "language"))
+
+(defn user-agent[]
+  "UserAgent used by the navigator"
+  (aget js/window "navigator" "userAgent"))
+
 (defn later[f msecs]
   "Async execution of the function."
   (go (let [timer (timeout msecs)]

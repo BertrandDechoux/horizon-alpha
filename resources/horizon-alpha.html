@@ -36,36 +36,27 @@
         <script src="../out/dev/goog/base.js" type="text/javascript"></script>
         <script src="../out/dev/horizon_alpha.js" type="text/javascript"></script>
         <script type="text/javascript">goog.require("horizon_alpha.core");</script>
-        <script type="text/javascript">
-            var is_not_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') < 0;
-            if (is_not_chrome) {
-                alert( "Le jeu a pour l'instant uniquement était testé avec Google Chrome. " +
-                       "En continuant, aucunes garanties ne peuvent être faites concernant " +
-                       "les performances ou même le fonctionnement correct du jeu.\n\n" +
-                       "Essayez Google Chrome : http://www.google.com/intl/fr_fr/chrome/browser/");
-            }
-        </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script>
-			$(document).ready(function() {
-				$( document ).on( "mouseenter", "div.player,circle.pc,circle.npc", function() {
-					$("body audio").remove();
-					$("<audio></audio>").attr({ 
-						'src':'audio/player.wav', 
-						'volume': 0.1,
-						'autoplay':'autoplay'
-					}).appendTo("body");
-				});
-				$( document ).on( "mouseenter", "g.target", function() {
-					$("body audio").remove();
-					$("<audio></audio>").attr({ 
-						'src':'audio/choice.wav', 
-						'volume': 0.1,
-						'autoplay':'autoplay'
-					}).appendTo("body");
-				});
-			});
+            $(document).ready(function() {
+                $( document ).on( "mouseenter", "div.player,circle.pc,circle.npc", function() {
+                    $("body audio").remove();
+                    $("<audio></audio>").attr({ 
+                        'src':'audio/player.wav', 
+                        'volume': 0.1,
+                        'autoplay':'autoplay'
+                    }).appendTo("body");
+                });
+                $( document ).on( "mouseenter", "g.target", function() {
+                    $("body audio").remove();
+                    $("<audio></audio>").attr({ 
+                        'src':'audio/choice.wav', 
+                        'volume': 0.1,
+                        'autoplay':'autoplay'
+                    }).appendTo("body");
+                });
+            });
     </script>
     </body>
 </html>
