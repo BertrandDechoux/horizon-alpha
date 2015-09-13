@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/BertrandDechoux/horizon-alpha.svg?branch=master)](https://travis-ci.org/BertrandDechoux/horizon-alpha)
+
 See [deployed version](http://bertranddechoux.github.io/horizon-alpha/resources/horizon-alpha.html)
 
 In order to develop, you need :
