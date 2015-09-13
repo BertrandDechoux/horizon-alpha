@@ -7,7 +7,7 @@
       :loot "loot"
       :npcs "The Bad People"
       :help "(help?)"
-      :guide "guide.html"
+      :guide "guide_en.html"
       :win "You win! :D"
       :lose "You lose! :("
     }
