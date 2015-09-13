@@ -33,5 +33,5 @@ And open [the application](http://localhost:8000/resources/horizon-alpha.html) w
 
 **Publish new version**
 
-Copy out/dev from master and override gh-pages
+Copy resources and out/dev from master and override gh-pages
 
