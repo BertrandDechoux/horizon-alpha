@@ -25,7 +25,12 @@
 (defn cursor [action]
   (cond
      (contains? #{:move :loot} action) "m 0 -5 l 6 6, -6 -6, -6 6, 6 -6, 0 16, 0 -16 z"
-     (contains? #{:attack :unleash :heal :beam} action) " l 0 0, 5 5, -5 -5, -5 5, 5 -5, -5 -5, 5 5, 5 -5, -5 5 z"
+     (contains? #{:heal} action) " l 0 0, 5 5, -5 -5, -5 5, 5 -5, -5 -5, 5 5, 5 -5, -5 5 z"
+     (contains? #{:attack :unleash :beam} action) "
+             l 0 0, 3 4, 0 -1, 1 0, -4 -3 z
+             l 0 0, 4 -3, -1 0, 0 -1, -3 4 z
+             l 0 0, -3 -4, 0 1, -1 0, 4 3 z
+             l 0 0, -4 3, 1 0, 0 1, 3 -4 z"
      (contains? #{:block :boast :charge} action) "m 0 0 z"
      :else " l 0 0, 10 10, -10 -10, -10 10, 10 -10, -10 -10, 10 10, 10 -10, -10 10 z"))
 
