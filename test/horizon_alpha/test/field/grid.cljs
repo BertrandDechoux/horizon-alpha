@@ -1,7 +1,7 @@
 (ns horizon-alpha.test.field.grid
-  (:require-macros [cemerick.cljs.test
-                    :refer (is deftest with-test run-tests testing test-var)])
-  (:require [cemerick.cljs.test :as t]
+  (:require-macros [cljs.test
+                    :refer (deftest is testing run-tests)])
+  (:require [cljs.test :as t]
             [horizon-alpha.field.pos :as p]
             [horizon-alpha.field.grid :as g]
             [horizon-alpha.test.utils :as u]))

@@ -9,7 +9,7 @@
                  [org.omcljs/om "0.9.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
-            [com.cemerick/clojurescript.test "0.3.1"]
+            [lein-doo "0.1.4"]
             [lein-ancient "0.6.7"]]
 
   :source-paths ["src"]
@@ -26,17 +26,11 @@
 
              {:id "test"
               :source-paths ["src" "test"]
-              :compiler {:output-dir "out/test"
+              :compiler {:main 'horizon-alpha.runner
+                         :output-dir "out/test"
                          :output-to "out/test/unit-test.js"
                          :preamble ["test/js/react.min.js"]
                          :externs ["test/js/react.extern.js"]
                          :optimizations :whitespace
                          :pretty-print true}}]
-
-    :test-commands {"unit-tests" ["phantomjs" :runner
-                                            "window.literal_js_executed=true"
-                                            "resources/test/js/es5-shim.js"
-                                            "resources/test/js/es5-sham.js"
-                                            "resources/test/js/console-polyfill.js"
-                                            "resources/test/js/polyfill.js"
-                                            "out/test/unit-test.js"]}})
+  })

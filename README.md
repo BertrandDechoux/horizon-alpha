@@ -13,7 +13,7 @@ lein clean
 
 **Run the tests**
 ```
-lein test
+lein doo phantom test
 ```
 
 **Check for outdated stuff**

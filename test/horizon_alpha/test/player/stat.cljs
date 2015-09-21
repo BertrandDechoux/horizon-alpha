@@ -1,7 +1,7 @@
 (ns horizon-alpha.test.player.stat
-  (:require-macros [cemerick.cljs.test
-                    :refer (is deftest with-test run-tests testing test-var)])
-  (:require [cemerick.cljs.test :as t]
+  (:require-macros [cljs.test
+                    :refer (deftest is testing run-tests)])
+  (:require [cljs.test :as t]
             [horizon-alpha.player.stat :as s]
             [horizon-alpha.test.utils :as u]))
 
