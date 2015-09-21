@@ -1,6 +1,9 @@
+**A Hack And Slash game inspired from the Noob universe of OLYDRI studio**
+
 [![Build Status](https://travis-ci.org/BertrandDechoux/horizon-alpha.svg?branch=master)](https://travis-ci.org/BertrandDechoux/horizon-alpha)
 
 See [deployed version](http://bertranddechoux.github.io/horizon-alpha/resources/horizon-alpha.html)
+[![Screenshot](screenshot.png)](http://bertranddechoux.github.io/horizon-alpha/resources/horizon-alpha.html)
 
 In order to develop, you need :
 * [leiningen](http://leiningen.org/)
