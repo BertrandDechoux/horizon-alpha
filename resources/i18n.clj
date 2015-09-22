@@ -1,7 +1,7 @@
 {
   :en {
     :setup {
-      :chrome-required "The chrome brower is required in order to play this game."
+      :chrome-required "The Chrome browser is required in order to play this game."
     }
     :app {
       :loot "loot"
@@ -15,7 +15,7 @@
 
   :fr {
     :setup {
-      :chrome-required "Le navigateur chrome doit etre utilisé pour lancer le jeu."
+      :chrome-required "Le navigateur Chrome doit être utilisé pour lancer le jeu."
     }
     :app {
       :loot "loot"
